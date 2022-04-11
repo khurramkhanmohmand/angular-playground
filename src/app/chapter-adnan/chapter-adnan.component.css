@@ -1,0 +1,11 @@
+a:not([href]) {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.subheader-nav {
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    padding: 5px;
+}

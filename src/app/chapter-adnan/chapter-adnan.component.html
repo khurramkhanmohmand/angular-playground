@@ -1,6 +1,12 @@
 <div style="margin-top: 60px;">
-    <b>Adnan: </b> Here you will see chapter content
-    <div>
-
+    <div class="subheader-nav">
+        <nav>
+            <a (click)="setStage('first')"> Excercise 1</a> |
+            <a (click)="setStage('second')">Excercise 2</a> |
+            <a (click)="setStage('third')">Excercise 3</a>
+        </nav>
     </div>
+        <div class="mainContainer">
+            <app-weather-info *ngIf="stage === 'first'"></app-weather-info>
+        </div>
 </div>

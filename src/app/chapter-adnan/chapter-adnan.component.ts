@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ChapterAdnanComponent implements OnInit {
 
   constructor() { }
-
+  stage = 'default';
   ngOnInit(): void {
+
+  }
+  
+  setStage(value: string){
+    this.stage = value;
   }
 
 }
