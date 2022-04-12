@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,6 +10,8 @@ import { ChapterRubabComponent } from './chapter-rubab/chapter-rubab.component';
 import { WeclomePageComponent } from './weclome-page/weclome-page.component';
 import { WeatherInfoComponent } from './chapter-adnan/weather-info/weather-info.component';
 
+import { HighchartsChartModule } from 'highcharts-angular';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { WeatherInfoComponent } from './chapter-adnan/weather-info/weather-info.
     ChapterAdnanComponent,
     ChapterKhurramComponent,
     ChapterRubabComponent,
-    WeatherInfoComponent
+    WeatherInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HighchartsChartModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
