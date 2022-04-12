@@ -6,22 +6,18 @@ import { ChapterKhurramComponent } from './chapter-khurram/chapter-khurram.compo
 import { ChapterAdnanComponent } from './chapter-adnan/chapter-adnan.component';
 import { HomeComponent } from './home/home.component';
 
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'rubab-work', component: ChapterRubabComponent},
+  {path: 'khurram-work', component: ChapterKhurramComponent},
+  {path: 'adnan-work', component: ChapterAdnanComponent},
+
+
+  {path: '**', redirectTo: '' }
+]
 
 @NgModule({
-  declarations:[
-    ChapterRubabComponent,
-    ChapterKhurramComponent,
-    ChapterAdnanComponent
-  ],
-  imports: [
-    RouterModule.forRoot([
-      {path: '', component: HomeComponent},
-      {path: 'rubab-work', component: ChapterRubabComponent},
-      {path: 'khurram-work', component: ChapterKhurramComponent},
-      {path: 'adnan-work', component: ChapterAdnanComponent}
-    ])
-  ],
-  providers: [],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
