@@ -1,0 +1,11 @@
+
+<div class="basic-weather-container" *ngIf="weatherInfo && weatherInfo.location">
+    <p>Here is weather info for <b>{{ weatherInfo.location.name }}</b>.</p>
+    <p>Cloudcover: {{weatherInfo.current.cloudcover}}</p>
+    <p>Feelslike: {{weatherInfo.current.feelslike}}</p>
+    <p>Humidity: {{weatherInfo.current.humidity}}</p>
+    <p>observation_time: {{weatherInfo.current.observation_time}}</p>
+    <p>Temperature: {{weatherInfo.current.temperature}}</p>
+    <p>UV Index: {{weatherInfo.current.uv_index}}</p>
+    <p>Visibility: {{weatherInfo.current.visibility}}</p>
+</div>
