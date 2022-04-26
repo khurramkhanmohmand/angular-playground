@@ -1,0 +1,30 @@
+.TopSection{
+  margin-top: 65px;
+}
+.mr-10{
+  margin: 10px;
+}
+.regist{
+  margin-top: 50px;
+}
+.mr-left{
+  margin-left: 10px;
+}
+
+form {
+  padding-top: 1rem;
+}
+
+label {
+  display: block;
+  margin: .5em 0;
+  font-weight: bold;
+}
+.submitbtn{
+  padding: 10px 50px;
+}
+.btn{
+  text-align: center;
+  display: inherit;
+}
+

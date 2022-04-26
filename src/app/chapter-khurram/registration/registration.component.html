@@ -1,0 +1,61 @@
+<div class="container-fluid image">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="TopSection row">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" routerLink="/khurram-work">Home</button>
+            <button class="nav-link" id="nav-highcharts-tab" data-bs-toggle="tab" data-bs-target="#nav-highcharts" type="button" role="tab" aria-controls="nav-highcharts" aria-selected="false" routerLink="/highCharts">HighCharts</button>
+            <button class="nav-link active" id="nav-regist-tab" data-bs-toggle="tab" data-bs-target="#nav-regist" type="button" role="tab" aria-controls="nav-regist" aria-selected="true" routerLink="/registration">Registration</button>
+          </div>
+        </nav>
+      <div>
+<div class="col-md-6 regist card">
+<div class="card-body">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <h2>
+      Registerd Here !
+    </h2>
+
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName" class="form-control" required>
+
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName" class="form-control">
+
+    <label for="email">Email: </label>
+    <input id="email" type="email" formControlName="email" class="form-control" required>
+
+
+    <label for="password">Password: </label>
+    <input id="password" type="password" formControlName="password" class="form-control">
+
+
+
+    <div formGroupName="address">
+      <h2>Address</h2>
+
+      <label for="street">Street: </label>
+      <input id="street" type="text" formControlName="street" class="form-control">
+
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city" class="form-control">
+
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state" class="form-control">
+
+      <label for="zip">Zip Code: </label>
+      <input id="zip"type="text" formControlName="zip" class="form-control">
+    </div>
+
+<div class="btn"><button type="submit" class="submitbtn" [disabled]="!profileForm.valid">Submit</button></div>
+
+  </form>
+</div>
+</div>
+
+
+    </div>
+  </div>
+</div>
